@@ -10,5 +10,5 @@ setup:  ## Create base image
 	docker build -t algorithms .
 
 
-test:  ## Run tests
-	docker run -v $(CURDIR)/:/code algorithms
+test:  clean ## Run tests
+	docker run -e PYTHONDONTWRITEBYTECODE=1 -v $(CURDIR)/:/code algorithms
