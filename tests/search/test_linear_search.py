@@ -9,7 +9,7 @@ import pytest
     linear_search.sentinel_linear_search
 ])
 def test_algorithm_should_return_negative_index_when_not_found(algorithm):
-    assert algorithm(list(range(0, 100000)), -2) == -1
+    assert algorithm([1, 2, 3, 4], 5) == -1
 
 
 @pytest.mark.parametrize('algorithm', [
@@ -18,4 +18,4 @@ def test_algorithm_should_return_negative_index_when_not_found(algorithm):
     linear_search.sentinel_linear_search
 ])
 def test_algorithm_should_return_index_from_element(algorithm):
-    assert algorithm(list(range(0, 1000000)), 999999) == 999999
+    assert algorithm([1, 2, 3, 4], 4) == 3

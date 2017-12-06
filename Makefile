@@ -10,5 +10,6 @@ setup:  ## Create base image
 	docker build -t algorithms .
 
 
-test:  clean ## Run tests
+test: clean ## Run tests
+	docker run -e PYTHONDONTWRITEBYTECODE=1 -v $(CURDIR)/:/code algorithms flake8
 	docker run -e PYTHONDONTWRITEBYTECODE=1 -v $(CURDIR)/:/code algorithms
