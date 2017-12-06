@@ -36,7 +36,7 @@ To properly run this project, we should install the dependencies:
 We have two kinds of tests implemented: unit tests and behaviour tests. We can run the tests with the following commands:
 
   ```bash
-  make tests 
+  make test
   ```
 
 
